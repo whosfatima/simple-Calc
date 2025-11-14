@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+.container{
+text-align: center;
+/* margin: 10px; */
+}
+h2{
+  margin-bottom: 12px;
+}
+input, button{
+  all: unset;
+}
+input {
+  border: 1px solid #000;
+  padding: 9px;
+  border-radius: 10px;
+  margin: 5px 10px;
+}
+button{
+  margin: 5px 10px;
+  border: 1px solid ;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+border-radius: 50%;
+}
+
+p{
+ margin-top: 12px; 
+ text-shadow: #1f6feb 1px 5px 4px;
+font-size: 50px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Simple calculator</h2>
+      <div class="inputs">
+        <input type="number" name="" id="input1" />
+        <input type="number" name="" id="input2" />
+      </div>
+      <div class="buttons">
+        <button id="add"><i class="fa-solid fa-plus"></i></button>
+        <button id="subtract"><i class="fa-solid fa-minus"></i></button>
+        <button id="multiply"><i class="fa-solid fa-xmark"></i></button>
+        <button id="divide"><i class="fa-solid fa-divide"></i></button>
+      </div>
+
+      <p class="result"></p>
+    </div>
+
+    <script>
+        
+
+let add = (num1, num2) => {
+  let add = num1 + num2
+  return add
+}
+let subtract = (num1, num2) => {
+  let subtract = num1 - num2
+  return subtract
+}
+let multiply = (num1, num2) => {
+  let multiply = num1 * num2
+  return multiply
+}
+let divide = (num1, num2) => {
+  let divide = num1 / num2
+  return divide
+}
+const addButtons = document.getElementById('add').onclick = () => {
+  let number1 = +input1.value
+  let number2 = +input2.value
+  let final = add(number1, number2)
+  result.textContent = final
+}
+const subtractButtons = document.getElementById('subtract').onclick = () => {
+  let number1 = +input1.value
+  let number2 = +input2.value
+  let final = subtract(number1, number2)
+  result.textContent = final
+}
+const multiplyButtons = document.getElementById('multiply').onclick = () => {
+  let number1 = +input1.value
+  let number2 = +input2.value
+  let final = multiply(number1, number2)
+  result.textContent = final
+}
+const divideButtons = document.getElementById('divide').onclick = () => {
+  let number1 = +input1.value
+  let number2 = +input2.value
+  let final = divide(number1, number2)
+  result.textContent = final
+}
+
+// inputs DOM
+const input1 = document.getElementById('input1')
+const input2 = document.getElementById('input2')
+
+// p DOM
+const result = document.querySelector('p')
+    </script>
+  </body>
+</html>
