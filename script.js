@@ -1,21 +1,9 @@
 
 
-let add = (num1, num2) => {
-  let add = num1 + num2
-  return add
-}
-let subtract = (num1, num2) => {
-  let subtract = num1 - num2
-  return subtract
-}
-let multiply = (num1, num2) => {
-  let multiply = num1 * num2
-  return multiply
-}
-let divide = (num1, num2) => {
-  let divide = num1 / num2
-  return divide
-}
+let add = (num1, num2) => num1 + num2
+let subtract = (num1, num2) => num1 - num2
+let multiply = (num1, num2) => num1 * num2
+let divide = (num1, num2) => num1 / num2
 const addButtons = document.getElementById('add').onclick = () => {
   let number1 = +input1.value
   let number2 = +input2.value
